@@ -30,11 +30,15 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'KTFoundation/Classes/**/*'
+#  s.source_files = 'KTFoundation/Classes/**/*'
   
-  s.subspec 'Macros' do |macros|
-	  macros.source_files = 'KTFoundation/Macros/Classes/**/*.{h,m}'
+  s.subspec 'Macros' do |sp|
+	  sp.source_files = 'KTFoundation/Macros/Classes/**/*.{h,m}'
   end
 
+  s.subspec 'Category' do |sp|
+	  sp.source_files = 'KTFoundation/Category/**/*.{h,m}'
+	  sp.dependency 'KTFoundation/Macros'
+  end
   
 end

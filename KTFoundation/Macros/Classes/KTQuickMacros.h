@@ -8,6 +8,8 @@
 #ifndef KTMacros_h
 #define KTMacros_h
 
+#import <pthread.h>
+
 #pragma mark - Assert
 #if DEBUG
 
@@ -91,6 +93,14 @@ typedef void(^KTCommonBlock)(id);
 	}
 #endif
 
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+	if (pthread_main_np()) {
+		block();
+	} else {
+		dispatch_async(dispatch_get_main_queue(), block);
+	}
+}
+
 #pragma mark - Lazy load
 #define KTLazyload(class, name, config) 	- (class *)name\
 											{\
@@ -120,6 +130,7 @@ typedef void(^KTCommonBlock)(id);
 - (_type_)_getter_ { \
 	return objc_getAssociatedObject(self, @selector(_setter_:)); \
 }
+
 #endif
 
 #ifndef KT_SYNTH_DYNAMIC_PROPERTY_CTYPE
@@ -160,6 +171,26 @@ typedef void(^KTCommonBlock)(id);
 #endif
 
 #pragma mark - Quick Help
+#ifdef __cplusplus
+#define KT_EXTERN_C_BEGIN  extern "C" {
+#define KT_EXTERN_C_END  }
+#else
+#define KT_EXTERN_C_BEGIN
+#define KT_EXTERN_C_END
+#endif
+
+
+KT_EXTERN_C_BEGIN
+
+#ifndef KT_CLAMP // return the clamped value
+#define KT_CLAMP(_x_, _low_, _high_)  (((_x_) > (_high_)) ? (_high_) : (((_x_) < (_low_)) ? (_low_) : (_x_)))
+#endif
+
+#ifndef KT_SWAP // swap two value
+#define KT_SWAP(_a_, _b_)  do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_; } while (0)
+#endif
+
+
 //main window
 #define kMainWindow                [UIApplication sharedApplication].keyWindow
 
@@ -212,7 +243,5 @@ if (@available(iOS 13.0, *)) {\
 	   }\
    }\
 (isDarkMode);})\
-
-
 
 #endif /* KTMacro_h */

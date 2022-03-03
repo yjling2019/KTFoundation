@@ -1,7 +1,10 @@
 PODS:
   - Kiwi (3.0.0)
   - KTFoundation (0.1.0):
+    - KTFoundation/Category (= 0.1.0)
     - KTFoundation/Macros (= 0.1.0)
+  - KTFoundation/Category (0.1.0):
+    - KTFoundation/Macros
   - KTFoundation/Macros (0.1.0)
 
 DEPENDENCIES:
@@ -18,7 +21,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  KTFoundation: 7b2e4968e8aaeb5df82722b41e3e83e2714bccb4
+  KTFoundation: 1f030a7c23daa73c281c2f31ad80bf1081413f63
 
 PODFILE CHECKSUM: c9723973356c04fa0cb5e745a141b5ea07ae2e9e
 
