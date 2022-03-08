@@ -41,4 +41,9 @@ TODO: Add long description of the pod here.
 	  sp.dependency 'KTFoundation/Macros'
   end
   
+  s.subspec 'Store' do |sp|
+	  sp.source_files = 'KTFoundation/Store/**/*.{h,m}'
+	  sp.dependency 'MMKV'
+  end
+  
 end

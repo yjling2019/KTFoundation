@@ -304,10 +304,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KTFoundation_Example/Pods-KTFoundation_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KTFoundation/KTFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework",
+				"${BUILT_PRODUCTS_DIR}/MMKVCore/MMKVCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKVCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

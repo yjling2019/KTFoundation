@@ -3,9 +3,15 @@ PODS:
   - KTFoundation (0.1.0):
     - KTFoundation/Category (= 0.1.0)
     - KTFoundation/Macros (= 0.1.0)
+    - KTFoundation/Store (= 0.1.0)
   - KTFoundation/Category (0.1.0):
     - KTFoundation/Macros
   - KTFoundation/Macros (0.1.0)
+  - KTFoundation/Store (0.1.0):
+    - MMKV
+  - MMKV (1.2.12):
+    - MMKVCore (~> 1.2.12)
+  - MMKVCore (1.2.12)
 
 DEPENDENCIES:
   - Kiwi
@@ -14,6 +20,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Kiwi
+    - MMKV
+    - MMKVCore
 
 EXTERNAL SOURCES:
   KTFoundation:
@@ -21,7 +29,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  KTFoundation: 1f030a7c23daa73c281c2f31ad80bf1081413f63
+  KTFoundation: f8e20e36a559eff2d416dbd7003798e59aab9716
+  MMKV: f281020c9d9be5eb7a03ae746dc4deb570e46c23
+  MMKVCore: df0565f6b58463604731a68ba6cd89bc0b2d1d55
 
 PODFILE CHECKSUM: c9723973356c04fa0cb5e745a141b5ea07ae2e9e
 
