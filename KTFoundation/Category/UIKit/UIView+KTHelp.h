@@ -114,4 +114,51 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+typedef void (^KTWhenTappedBlock)(void);
+
+@interface UIView (KTGestureBlock) <UIGestureRecognizerDelegate>
+
+/**
+ *  @brief  单次点击事件block调度
+ *
+ *  @param  block 调度函数
+ *
+ */
+- (void)kt_whenTapped:(KTWhenTappedBlock)block;
+
+/**
+ *  @brief  双击事件block调度
+ *
+ *  @param  block 调度函数
+ *
+ */
+- (void)kt_whenDoubleTapped:(KTWhenTappedBlock)block;
+
+/**
+ *  @brief  双指事件block调度
+ *
+ *  @param  block 调度函数
+ *
+ */
+- (void)kt_whenTwoFingerTapped:(KTWhenTappedBlock)block;
+
+/**
+ *  @brief  按下事件block调度
+ *
+ *  @param  block 调度函数
+ *
+ */
+- (void)kt_whenTouchedDown:(KTWhenTappedBlock)block;
+
+/**
+ *  @brief  弹起事件block调度
+ *
+ *  @param  block 调度函数
+ *
+ */
+- (void)kt_whenTouchedUp:(KTWhenTappedBlock)block;
+
+@end
+
 NS_ASSUME_NONNULL_END
