@@ -117,7 +117,8 @@
 												 name:UIApplicationDidReceiveMemoryWarningNotification
 											   object:nil];
 	
- 
+	[MMKV initializeMMKV:[MMKV mmkvBasePath]];
+	
     
 //    NSString *isMmkvHasMigrated = @"isMmkvHasMigrated";
 //    // 迁移userdefaults的数据到MMKV
