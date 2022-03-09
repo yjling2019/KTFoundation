@@ -6,7 +6,7 @@
 //  Copyright © 2017年 cyd. All rights reserved.
 //
 
-#import "UIView+Effects.h"
+#import "UIView+KTEffects.h"
 #import <objc/runtime.h>
 
 #define kConrnerCorner  "UIView.privateConrnerCorner"
