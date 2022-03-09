@@ -29,18 +29,18 @@
 #define kViewVVOptimise "UIView.VVOptimise"
 
 @implementation UIView (KTEffects)
-@dynamic conrnerCorner,
-         conrnerRadius,
-         borderColor,
-         borderWidth,
-         shadowColor,
-         shadowOffset,
-         shadowRadius,
-         shadowOpacity,
-         showVisual,
-         clerVisual,
-         bezierPath,
-         viewBounds;
+@dynamic kt_corner,
+         kt_conrnerRadius,
+         kt_borderColor,
+         kt_borderWidth,
+         kt_shadowColor,
+         kt_shadowOffset,
+         kt_shadowRadius,
+         kt_shadowOpacity,
+         kt_showVisual,
+         kt_clerVisual,
+         kt_bezierPath,
+         kt_viewBounds;
 
 #pragma mark - 添加私有属性
 // mark - 圆角 矩形 默认 AllCorners
@@ -161,77 +161,77 @@
 }
 
 #pragma mark - 链式属性实现
-- (ConrnerCorner)conrnerCorner {
+- (KTCornerCornerBlock)kt_corner {
     return ^(UIRectCorner corner) {
         self.privateConrnerCorner = corner;
         return self;
     };
 }
 
-- (ConrnerRadius)conrnerRadius {
+- (KTCornerRadiusBlock)kt_conrnerRadius {
     return ^(CGFloat radius) {
         self.privateConrnerRadius = radius;
         return self;
     };
 }
 
-- (BorderColor)borderColor {
+- (KTBorderColorBlock)kt_borderColor {
     return ^(UIColor *color) {
         self.privateBorderColor = color;
         return self;
     };
 }
 
-- (BorderWidth)borderWidth {
+- (KTBorderWidthBlock)kt_borderWidth {
     return ^(CGFloat width) {
         self.privateBorderWidth = width;
         return self;
     };
 }
 
-- (ShadowOpacity)shadowOpacity {
+- (KTShadowOpacityBlock)kt_shadowOpacity {
     return ^(CGFloat opacity) {
         self.privateShadowOpacity = opacity;
         return self;
     };
 }
 
-- (ShadowRadius)shadowRadius {
+- (KTShadowRadiusBlock)kt_shadowRadius {
     return ^(CGFloat radius) {
         self.privateShadowRadius = radius;
         return self;
     };
 }
 
-- (ShadowOffset)shadowOffset {
+- (KTShadowOffsetBlock)kt_shadowOffset {
     return ^(CGSize size) {
         self.privateShadowOffset = size;
         return self;
     };
 }
 
-- (ShadowColor)shadowColor {
+- (KTShadowColorBlock)kt_shadowColor {
     return ^(UIColor *color) {
         self.privateShadowColor = color;
         return self;
     };
 }
 
-- (BezierPath)bezierPath {
+- (KTBezierPathBlock)kt_bezierPath {
     return ^(UIBezierPath *path) {
         self.privateBezierPath = path;
         return self;
     };
 }
 
-- (ViewBounds)viewBounds {
+- (KTViewBoundsBlock)kt_viewBounds {
     return ^(CGRect rect) {
         self.privateViewBounds = rect;
         return self;
     };
 }
 
-- (Optimise)willOptimise {
+- (KTOptimiseBlock)kt_willOptimise {
     return ^ (BOOL willOptimis) {
         self.privateOptimise = willOptimis;
         return self;
@@ -239,7 +239,7 @@
 }
 
 #pragma mark - 方法实现
-- (ClerVisual)clerVisual {
+- (KTClerVisualBlock)kt_clerVisual {
     return ^{
         // 阴影
         if (self.shadowBackgroundView) {
@@ -280,7 +280,7 @@
     };
 }
 
-- (ShowVisual)showVisual {
+- (KTShowVisualBlock)kt_showVisual {
     return ^{
         // 阴影
         [self addShadow];
