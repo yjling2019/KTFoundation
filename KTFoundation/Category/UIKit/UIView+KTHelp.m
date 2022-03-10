@@ -169,6 +169,15 @@
     return rect;
 }
 
+- (void)kt_addSubviews:(NSArray <UIView *> *)views {
+	for (UIView *view in views) {
+		if (![view isKindOfClass:[UIView class]]) {
+			continue;
+		}
+		[self addSubview:view];
+	}
+}
+
 - (CGFloat)kt_left {
     return self.frame.origin.x;
 }

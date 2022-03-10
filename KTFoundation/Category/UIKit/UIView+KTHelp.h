@@ -100,6 +100,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CGRect)kt_convertRect:(CGRect)rect fromViewOrWindow:(nullable UIView *)view;
 
+/// add several subviews
+/// @param views views
+- (void)kt_addSubviews:(NSArray <UIView *> *)views;
 
 @property (nonatomic) CGFloat kt_left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat kt_top;         ///< Shortcut for frame.origin.y
