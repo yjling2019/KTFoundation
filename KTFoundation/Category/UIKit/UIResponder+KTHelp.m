@@ -1,14 +1,14 @@
 //
-//  UIResponder+KTHelper.m
+//  UIResponder+KTHelp.m
 //  KOTU
 //
 //  Created by KOTU on 2017/12/28.
 //  Copyright © 2017年 KOTU. All rights reserved.
 //
 
-#import "UIResponder+KTHelper.h"
+#import "UIResponder+KTHelp.h"
 
-@implementation UIResponder (KTHelper)
+@implementation UIResponder (KTHelp)
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
 {

@@ -1,5 +1,5 @@
 //
-//  UIResponder+KTHelper.h
+//  UIResponder+KTHelp.h
 //  KOTU
 //
 //  Created by KOTU on 2017/12/28.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIResponder (KTHelper)
+@interface UIResponder (KTHelp)
 
 /**
  使用next responder充当路由来传递事件
