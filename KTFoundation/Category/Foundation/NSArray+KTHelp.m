@@ -354,6 +354,24 @@
 	return [array copy];
 }
 
+- (nullable NSArray *)kt_subArrayFromIndex:(NSUInteger)index
+{
+	if (index < self.count) {
+		return [self subarrayWithRange:NSMakeRange(index, self.count-index)];
+
+	}
+	return nil;
+}
+
+- (nonnull NSArray *)kt_subArrayToIndex:(NSUInteger)index
+{
+	if (index < self.count) {
+		return [self subarrayWithRange:NSMakeRange(0, index)];
+	}
+	
+	return [NSArray arrayWithArray:self];
+}
+
 @end
 
 

@@ -140,6 +140,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nonnull NSArray *)kt_descSortArray;
 
+- (nullable NSArray *)kt_subArrayFromIndex:(NSUInteger)index;
+
+- (nonnull NSArray *)kt_subArrayToIndex:(NSUInteger)index;
+
 @end
 
 
