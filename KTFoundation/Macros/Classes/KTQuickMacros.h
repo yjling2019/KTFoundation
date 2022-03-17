@@ -35,16 +35,16 @@
 
 
 #if DEBUG
-#define KTAssertReturn(condition, desc, result)		NSAssert(condition, desc); \
-													if (!condition) { return result; }
-#define KTAssertReturnVoid(condition, desc)			NSAssert(condition, desc); \
-													if (!condition) { return; }
+#define KTAssertReturn(condition, desc, result)		NSAssert((condition), desc); \
+													if (!(condition)) { return result; }
+#define KTAssertReturnVoid(condition, desc)			NSAssert((condition), desc); \
+													if (!(condition)) { return; }
 #define KTAssertReturnNil(condition, desc)			NSAssert(condition, desc); \
-													if (!condition) { return nil; }
+													if (!(condition)) { return nil; }
 #else
-#define KTAssertReturn(condition, desc, result)		if (!condition) { return result; }
-#define KTAssertReturnVoid(condition, desc)			if (!condition) { return; }
-#define KTAssertReturnNil(condition, desc)			if (!condition) { return nil; }
+#define KTAssertReturn(condition, desc, result)		if (!(condition) { return result; }
+#define KTAssertReturnVoid(condition, desc)			if (!(condition)) { return; }
+#define KTAssertReturnNil(condition, desc)			if (!(condition)) { return nil; }
 #endif
 
 
@@ -53,9 +53,9 @@
 #define KTClassAssertReturnVoid(instance, class_name)               KTAssertReturnVoid([instance isKindOfClass:[class_name class]], @"class error.")
 #define KTClassAssertReturnNil(instance, class_name)                KTAssertReturnNil([instance isKindOfClass:[class_name class]], @"class error.")
 
-#define KTParameterAssertReturn(condition, result)                  KTAssertReturn((condition), @"params error.", result)
-#define KTParameterAssertReturnVoid(condition)                      KTAssertReturnVoid(condition), @"params error.")
-#define KTParameterAssertReturnNil(condition)                       KTParameterAssertReturnNil(condition), @"params error.")
+#define KTParameterAssertReturn(condition, result)                  KTAssertReturn(((condition)), @"params error.", result)
+#define KTParameterAssertReturnVoid(condition)                      KTAssertReturnVoid((condition)), @"params error.")
+#define KTParameterAssertReturnNil(condition)                       KTParameterAssertReturnNil((condition)), @"params error.")
 
 #pragma mark - Debug Helper
 
