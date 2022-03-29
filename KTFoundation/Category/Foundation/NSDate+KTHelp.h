@@ -183,6 +183,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable NSDate *)kt_dateWithISOFormatString:(NSString *)dateString;
 
+#pragma mark - Date relative
+// 获取日期date对应月的第一天日期
++ (nullable NSDate *)kt_monthFirstDayWithDate:(NSDate *)date;
+// 获取日期date对应月的最后一天日期
++ (nullable NSDate *)kt_monthLastDayWithDate:(NSDate *)date;
+
+- (nullable NSDate *)kt_firstDayInTheMonth;
+- (nullable NSDate *)kt_lastDayInTheMonth;
+
 @end
 
 NS_ASSUME_NONNULL_END

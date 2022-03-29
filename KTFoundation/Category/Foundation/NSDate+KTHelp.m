@@ -181,4 +181,36 @@
     return [formatter dateFromString:dateString];
 }
 
+#pragma mark - Date relative
++ (NSDate *)kt_monthFirstDayWithDate:(NSDate *)date
+{
+	NSTimeInterval interval = 0;
+	NSDate *firstDay;
+	BOOL success = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitMonth startDate:&firstDay interval:&interval forDate:date];
+	return success ? firstDay : nil;
+}
+
++ (NSDate *)kt_monthLastDayWithDate:(NSDate *)date
+{
+	double interval = 0;
+	NSDate *firstDay;
+	NSDate *lastDay;
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	BOOL success = [calendar rangeOfUnit:NSCalendarUnitMonth startDate:&firstDay interval:&interval forDate:date];
+	if (success) {
+		lastDay = [firstDay dateByAddingTimeInterval:interval - 1];
+	}
+	return success ? lastDay : nil;
+}
+
+- (nullable NSDate *)kt_firstDayInTheMonth
+{
+	return [NSDate kt_monthFirstDayWithDate:self];
+}
+
+- (nullable NSDate *)kt_lastDayInTheMonth
+{
+	return [NSDate kt_monthLastDayWithDate:self];
+}
+
 @end
