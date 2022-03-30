@@ -182,6 +182,30 @@
 }
 
 #pragma mark - Date relative
++ (NSDate *)kt_weekFirstDayWithDate:(NSDate *)date
+{
+	NSTimeInterval interval = 0;
+	NSDate *firstDay;
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	[calendar setFirstWeekday:2];
+	BOOL success = [calendar rangeOfUnit:NSCalendarUnitWeekOfYear startDate:&firstDay interval:&interval forDate:date];
+	return success ? firstDay : nil;
+}
+
++ (NSDate *)kt_weekLastDayWithDate:(NSDate *)date
+{
+	double interval = 0;
+	NSDate *firstDay;
+	NSDate *lastDay;
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	[calendar setFirstWeekday:2];
+	BOOL success = [calendar rangeOfUnit:NSCalendarUnitWeekOfYear startDate:&firstDay interval:&interval forDate:date];
+	if (success) {
+		lastDay = [firstDay dateByAddingTimeInterval:interval - 1];
+	}
+	return success ? lastDay : nil;
+}
+
 + (NSDate *)kt_monthFirstDayWithDate:(NSDate *)date
 {
 	NSTimeInterval interval = 0;
@@ -201,6 +225,16 @@
 		lastDay = [firstDay dateByAddingTimeInterval:interval - 1];
 	}
 	return success ? lastDay : nil;
+}
+
+- (nullable NSDate *)kt_firstDayInTheWeek
+{
+	return [NSDate kt_weekFirstDayWithDate:self];
+}
+
+- (nullable NSDate *)kt_lastDayInTheWeek
+{
+	return [NSDate kt_weekLastDayWithDate:self];
 }
 
 - (nullable NSDate *)kt_firstDayInTheMonth
