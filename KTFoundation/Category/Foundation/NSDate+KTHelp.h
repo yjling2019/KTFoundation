@@ -202,6 +202,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取当前月的最后一天
 - (nullable NSDate *)kt_lastDayInTheMonth;
 
+/// get yesterday
+- (NSDate *)kt_yesterday;
+/// get tomorrow
+- (NSDate *)kt_tomorrow;
+
 @end
 
 NS_ASSUME_NONNULL_END

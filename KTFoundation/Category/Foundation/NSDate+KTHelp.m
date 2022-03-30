@@ -247,4 +247,14 @@
 	return [NSDate kt_monthLastDayWithDate:self];
 }
 
+- (NSDate *)kt_yesterday
+{
+	return [self kt_dateByAddingDays:-1];
+}
+
+- (NSDate *)kt_tomorrow
+{
+	return [self kt_dateByAddingDays:1];
+}
+
 @end
