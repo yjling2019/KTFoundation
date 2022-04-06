@@ -42,7 +42,7 @@
 #define KTAssertReturnNil(condition, desc)			NSAssert(condition, desc); \
 													if (!(condition)) { return nil; }
 #else
-#define KTAssertReturn(condition, desc, result)		if (!(condition) { return result; }
+#define KTAssertReturn(condition, desc, result)		if (!(condition)) { return result; }
 #define KTAssertReturnVoid(condition, desc)			if (!(condition)) { return; }
 #define KTAssertReturnNil(condition, desc)			if (!(condition)) { return nil; }
 #endif
