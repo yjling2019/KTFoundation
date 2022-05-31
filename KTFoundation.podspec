@@ -46,4 +46,8 @@ TODO: Add long description of the pod here.
 	  sp.dependency 'MMKV'
   end
   
+  s.subspec 'Device' do |sp|
+	  sp.source_files = 'KTFoundation/Device/**/*.{h,m}'
+  end
+  
 end

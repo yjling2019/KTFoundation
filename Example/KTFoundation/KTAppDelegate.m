@@ -8,6 +8,7 @@
 
 #import "KTAppDelegate.h"
 #import "KTMacros.h"
+#import "KTDeviceUtils.h"
 
 @implementation KTAppDelegate
 

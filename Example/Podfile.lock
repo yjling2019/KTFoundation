@@ -2,10 +2,12 @@ PODS:
   - Kiwi (3.0.0)
   - KTFoundation (0.1.0):
     - KTFoundation/Category (= 0.1.0)
+    - KTFoundation/Device (= 0.1.0)
     - KTFoundation/Macros (= 0.1.0)
     - KTFoundation/Store (= 0.1.0)
   - KTFoundation/Category (0.1.0):
     - KTFoundation/Macros
+  - KTFoundation/Device (0.1.0)
   - KTFoundation/Macros (0.1.0)
   - KTFoundation/Store (0.1.0):
     - MMKV
@@ -29,7 +31,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  KTFoundation: f8e20e36a559eff2d416dbd7003798e59aab9716
+  KTFoundation: a74fcc57b3596edcf5999c81d91b5610d8d3a500
   MMKV: f281020c9d9be5eb7a03ae746dc4deb570e46c23
   MMKVCore: df0565f6b58463604731a68ba6cd89bc0b2d1d55
 
