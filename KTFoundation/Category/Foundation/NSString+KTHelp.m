@@ -220,12 +220,12 @@
 
 - (CGFloat)kt_widthForFont:(UIFont *)font {
     CGSize size = [self kt_sizeForFont:font size:CGSizeMake(HUGE, HUGE) mode:NSLineBreakByWordWrapping];
-    return size.width;
+    return ceil(size.width);
 }
 
 - (CGFloat)kt_heightForFont:(UIFont *)font width:(CGFloat)width {
     CGSize size = [self kt_sizeForFont:font size:CGSizeMake(width, HUGE) mode:NSLineBreakByWordWrapping];
-    return size.height;
+    return ceil(size.height);
 }
 
 - (NSInteger)kt_lineCountForFont:(UIFont *)font width:(CGFloat)width {

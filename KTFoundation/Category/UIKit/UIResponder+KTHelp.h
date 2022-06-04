@@ -22,6 +22,16 @@ static NSString * const kResponderRouterDataKey = @"data";
  */
 - (void)routerEventWithName:(nullable NSString *)eventName userInfo:(nullable NSDictionary *)userInfo;
 
+/// 寻找响应链中下一个指定的类
+/// @param cls 类
+- (__kindof UIResponder * _Nullable)nextResponderOfClass:(Class)cls;
+/// 寻找响应链中下一个指定的类
+/// @param clsName 类名
+- (__kindof UIResponder * _Nullable)nextResponderOfClassName:(NSString *)clsName;
+/// 寻找响应链中下一个支持协议的响应者
+/// @param prtcol 协议
+- (__kindof UIResponder * _Nullable)nextResponderConformsToProtocol:(Protocol *)prtcol;
+
 @end
 
 NS_ASSUME_NONNULL_END
