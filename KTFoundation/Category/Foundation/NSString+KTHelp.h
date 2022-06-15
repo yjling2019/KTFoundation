@@ -454,6 +454,22 @@ static NSString * const kZipCodeRegex = @"^([A-Za-z]|[0-9])([0-9]|[A-Za-z]|\\s|\
 /// @param color 高亮颜色
 + (NSAttributedString *)kt_distinguishWithString:(NSString *)string pattern:(NSString *)pattern highLightColor:(UIColor *)color;
 
+/// 中文字符串长度(一个中文计入长度2)
+- (NSInteger)kt_chineseStringLength;
+
+#pragma mark - valid
+/// 是否中文字符串
+- (BOOL)kt_isChinese;
+
+/// 是否英文字母
+- (BOOL)kt_isEnglishCharacter;
+/// 是否大写字母
+- (BOOL)kt_isCapitalLetter;
+/// 是否小写字母
+- (BOOL)kt_isLowercaseLetter;
+/// 是否数字
+- (BOOL)kt_isNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END
