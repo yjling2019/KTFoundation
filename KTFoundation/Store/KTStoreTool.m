@@ -135,7 +135,7 @@
 //    }
 }
 
-- (void)handleMemoryWarning
++ (void)handleMemoryWarning
 {
 	// 在内存警告时，清除mmkv内存部分缓存
 	[MMKV.defaultMMKV clearMemoryCache];
