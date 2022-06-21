@@ -34,7 +34,7 @@ typedef UIView *(^KTClerVisualBlock) (void);
 
 // 圆角
 @property(nonatomic, strong, readonly)KTCornerCornerBlock kt_corner;  // UIRectCorner 默认 UIRectCornerAllCorners
-@property(nonatomic, strong, readonly)KTCornerRadiusBlock kt_conrnerRadius;  // 圆角半径 默认 0.0
+@property(nonatomic, strong, readonly)KTCornerRadiusBlock kt_cornerRadius;  // 圆角半径 默认 0.0
 
 // 边框
 @property(nonatomic, strong, readonly)KTBorderColorBlock   kt_borderColor;    // 边框颜色 默认 black

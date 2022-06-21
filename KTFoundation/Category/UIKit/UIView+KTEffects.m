@@ -30,7 +30,7 @@
 
 @implementation UIView (KTEffects)
 @dynamic kt_corner,
-         kt_conrnerRadius,
+         kt_cornerRadius,
          kt_borderColor,
          kt_borderWidth,
          kt_shadowColor,
@@ -168,7 +168,7 @@
     };
 }
 
-- (KTCornerRadiusBlock)kt_conrnerRadius {
+- (KTCornerRadiusBlock)kt_cornerRadius {
     return ^(CGFloat radius) {
         self.privateConrnerRadius = radius;
         return self;
