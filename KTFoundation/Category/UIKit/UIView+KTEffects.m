@@ -38,7 +38,7 @@
          kt_shadowRadius,
          kt_shadowOpacity,
          kt_showVisual,
-         kt_clerVisual,
+         kt_clearVisual,
          kt_bezierPath,
          kt_viewBounds;
 
@@ -239,7 +239,7 @@
 }
 
 #pragma mark - 方法实现
-- (KTClerVisualBlock)kt_clerVisual {
+- (KTClearVisualBlock)kt_clearVisual {
     return ^{
         // 阴影
         if (self.shadowBackgroundView) {
