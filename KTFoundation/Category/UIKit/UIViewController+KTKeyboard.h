@@ -28,7 +28,7 @@
 #import <UIKit/UIKit.h>
 
 //管理键盘显示和隐藏的回调Block的声明
-typedef void (^KeyboardManageKeyboardShowAndHide) (void);
+typedef void (^KeyboardManageKeyboardShowAndHide) (NSDictionary *userInfo);
 //管理TextField文本改变的回调Block的声明
 typedef void (^KeyboardManageTextFieldTextDidChange) (UITextField * textField);
 
