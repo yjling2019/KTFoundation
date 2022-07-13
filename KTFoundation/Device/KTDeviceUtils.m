@@ -32,12 +32,6 @@
 NSNotificationName const kUsedMemoryDidChanged = @"kUsedMemoryDidChanged";
 NSNotificationName const kAvailableMemoryDidChanged = @"kAvailableMemoryDidChanged";
 
-/// idfa 保存在UserDefaluts的key
-static NSString * const kVVIDFAUserDefaultsKey = @"kVVIDFAUserDefaultsKey";
-
-/// 安全区存的缓存key
-static NSString * const kVVSafeAreaInsetsUserDefaultsKey = @"com.vova.ios.rootlib.safeAreaInsets";
-
 @implementation KTDeviceUtils
 
 /**
@@ -124,10 +118,10 @@ static NSString * const kVVSafeAreaInsetsUserDefaultsKey = @"com.vova.ios.rootli
 //{
 //    static NSString *current_IDFA = nil;
 //    if (!current_IDFA) {
-//        NSString *idfa = [[NSUserDefaults standardUserDefaults] stringForKey:kVVIDFAUserDefaultsKey];
+//        NSString *idfa = [[NSUserDefaults standardUserDefaults] stringForKey:kKTIDFAUserDefaultsKey];
 //        if (!idfa ||(idfa && idfa.length == 0) || [idfa isEqualToString:@"00000000-0000-0000-0000-000000000000"]) {
 //            current_IDFA = [self IDFV];
-//            [[NSUserDefaults standardUserDefaults] setObject:current_IDFA forKey:kVVIDFAUserDefaultsKey];
+//            [[NSUserDefaults standardUserDefaults] setObject:current_IDFA forKey:kKTIDFAUserDefaultsKey];
 //            [[NSUserDefaults standardUserDefaults] synchronize];
 //            return current_IDFA ? current_IDFA : @"";
 //        } else {
