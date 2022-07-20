@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol KTValidProtocol <NSObject>
 
+@optional
 @property (nonatomic, assign, readonly) BOOL kt_isValid;
+- (BOOL)kt_validWithErrorMsg:(NSString *_Nullable *_Nullable)errorMsg;
 
 @end
 
