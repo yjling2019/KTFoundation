@@ -498,6 +498,29 @@
 	return yearString;
 }
 
+- (NSAttributedString *)kt_attributeStringWithFont:(UIFont *)font {
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	[dict setValue:font forKey:NSFontAttributeName];
+	NSAttributedString *str = [[NSAttributedString alloc] initWithString:self attributes:dict];
+	return str;
+}
+
+- (NSAttributedString *)kt_attributeStringWithTextColor:(UIColor *)color {
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	[dict setValue:color forKey:NSForegroundColorAttributeName];
+	NSAttributedString *str = [[NSAttributedString alloc] initWithString:self attributes:dict];
+	return str;
+}
+
+- (NSAttributedString *)kt_attributeStringWithFont:(UIFont *)font textColor:(UIColor *)color {
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	[dict setValue:font forKey:NSFontAttributeName];
+	[dict setValue:color forKey:NSForegroundColorAttributeName];
+	NSAttributedString *str = [[NSAttributedString alloc] initWithString:self attributes:dict];
+	return str;
+
+}
+
 - (NSAttributedString *)kt_highLightedEmailWithColor:(UIColor *)color {
 	return [NSString kt_distinguishWithString:self pattern:kEmailRegex highLightColor:color];
 }
