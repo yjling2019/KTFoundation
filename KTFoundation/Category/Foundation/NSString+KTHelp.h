@@ -41,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 static NSString * const kEmailRegex = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,}";
 // 邮编正则，必须以数字或者字母开头，且只能包含数字、字母、空格、和连号
 static NSString * const kZipCodeRegex = @"^([A-Za-z]|[0-9])([0-9]|[A-Za-z]|\\s|\\-){0,}";
+// 中文、英文、数字，不支持其他符号
+static NSString *const kLetterNumberChineseRegex = @"^[\u4E00-\u9FA5a-zA-Z0-9\b]+$";
 
 /**
  Provide hash, encrypt, encode and some common method for 'NSString'.

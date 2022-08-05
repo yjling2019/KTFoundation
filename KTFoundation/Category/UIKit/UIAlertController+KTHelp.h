@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)kt_addCancelButtonWithTitle:(nullable NSString *)title action:(nullable void(^)(UIAlertAction *action))handler;
 - (void)kt_addDestructiveButtonWithTitle:(NSString *)title action:(void(^)(UIAlertAction *action))handler;
 - (void)kt_addButtonWithTitle:(NSString *)title action:(nullable void(^)(UIAlertAction *action))handler;
+- (void)kt_addTextFieldWithConfigurationHandler:(void (^ __nullable)(UITextField *textField))configurationHandler;
 
 @end
 

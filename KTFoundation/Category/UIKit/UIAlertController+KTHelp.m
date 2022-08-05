@@ -45,4 +45,9 @@
 	[self addAction:action];
 }
 
+- (void)kt_addTextFieldWithConfigurationHandler:(void (^)(UITextField * _Nonnull))configurationHandler
+{
+	[self addTextFieldWithConfigurationHandler:configurationHandler];
+}
+
 @end
