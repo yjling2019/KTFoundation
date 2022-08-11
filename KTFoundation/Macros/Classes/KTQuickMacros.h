@@ -202,8 +202,8 @@ KT_EXTERN_C_BEGIN
 // RGB颜色
 #define RGB(r, g, b) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
 
-// 根据屏幕的宽度自适应，此处UISize如同fontSize，不是结构体CGSize
-#define autoScaleSize(UISize) (UISize * SCREEN_W / 375)// 375为设计图宽度
+// 根据屏幕的宽度自适应高度
+#define autoScaleHeight(height) (SCREEN_W * height / 375)// 375为设计图宽度
 
 //商品列表 商品cell 之间的itemspace
 #define kProductItemSpace 10
