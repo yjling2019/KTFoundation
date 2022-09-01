@@ -7,6 +7,7 @@
 //
 
 #import "KTViewController.h"
+#import "KTFoundationCategory.h"
 
 @interface KTViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	if (self.view.kt_viewController == self) {
+		NSLog(@"aaa");
+	}
 }
 
 - (void)didReceiveMemoryWarning

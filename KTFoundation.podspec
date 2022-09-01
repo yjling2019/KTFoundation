@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KTFoundation'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'KOTU\'S foundation kit.'
 
 # This description is used to generate tags and improve search results.
@@ -48,6 +48,10 @@ TODO: Add long description of the pod here.
   
   s.subspec 'Device' do |sp|
 	  sp.source_files = 'KTFoundation/Device/**/*.{h,m}'
+  end
+  
+  s.subspec 'Sandbox' do |sp|
+	  sp.source_files = 'KTFoundation/Sandbox/**/*.{h,m}'
   end
   
 end
