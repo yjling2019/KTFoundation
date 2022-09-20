@@ -1,17 +1,17 @@
 PODS:
   - Kiwi (3.0.0)
-  - KTFoundation (1.0.4):
-    - KTFoundation/Category (= 1.0.4)
-    - KTFoundation/Device (= 1.0.4)
-    - KTFoundation/Macros (= 1.0.4)
-    - KTFoundation/Sandbox (= 1.0.4)
-    - KTFoundation/Store (= 1.0.4)
-  - KTFoundation/Category (1.0.4):
+  - KTFoundation (1.0.6):
+    - KTFoundation/Category (= 1.0.6)
+    - KTFoundation/Device (= 1.0.6)
+    - KTFoundation/Macros (= 1.0.6)
+    - KTFoundation/Sandbox (= 1.0.6)
+    - KTFoundation/Store (= 1.0.6)
+  - KTFoundation/Category (1.0.6):
     - KTFoundation/Macros
-  - KTFoundation/Device (1.0.4)
-  - KTFoundation/Macros (1.0.4)
-  - KTFoundation/Sandbox (1.0.4)
-  - KTFoundation/Store (1.0.4):
+  - KTFoundation/Device (1.0.6)
+  - KTFoundation/Macros (1.0.6)
+  - KTFoundation/Sandbox (1.0.6)
+  - KTFoundation/Store (1.0.6):
     - MMKV
   - MMKV (1.2.12):
     - MMKVCore (~> 1.2.12)
@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  KTFoundation: 868baa3f9560b0dd51ac983ab2ce94e23545451c
+  KTFoundation: 17e61af1cab0926063eb3fb41fefd733fd9ccf4b
   MMKV: f281020c9d9be5eb7a03ae746dc4deb570e46c23
   MMKVCore: df0565f6b58463604731a68ba6cd89bc0b2d1d55
 

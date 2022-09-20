@@ -328,7 +328,17 @@ NS_ASSUME_NONNULL_BEGIN
  @return UIImage对象
  */
 + (UIImage *)imageWithName:(__kindof NSString *)imageName
-                   podName:(__kindof NSString *)podName;
+                   podName:(__kindof NSString *)podName DEPRECATED_MSG_ATTRIBUTE("use imageNamed:inPod: instead");
+
+/**
+ 在模块内查找UIImage的方法
+ 
+ @param imageName 图片的名字，如果是非png格式的话，要带上后缀名
+ @param podName pod库名 podName为nil的话，默认为MainBundle
+ @return UIImage对象
+ */
++ (UIImage *)imageNamed:(__kindof NSString *)imageName
+				  inPod:(__kindof NSString *)podName;
 
 @end
 

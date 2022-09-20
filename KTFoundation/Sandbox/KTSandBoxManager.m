@@ -426,14 +426,21 @@
 + (UIImage *)imageWithName:(__kindof NSString *)imageName
                    podName:(__kindof NSString *)podName
 {
-    NSBundle * pod_bundle =[self bundleWithPodName:podName];
-    if (!pod_bundle) {
-        return nil;
-    }
-    if (!pod_bundle.loaded) {
-        [pod_bundle load];
-    }
-    UIImage *image = [UIImage imageNamed:imageName inBundle:pod_bundle compatibleWithTraitCollection:nil];
-    return image;
+	return [self imageNamed:imageName inPod:podName];
 }
+
++ (UIImage *)imageNamed:(__kindof NSString *)imageName
+				  inPod:(__kindof NSString *)podName
+{
+	NSBundle * pod_bundle =[self bundleWithPodName:podName];
+	if (!pod_bundle) {
+		return nil;
+	}
+	if (!pod_bundle.loaded) {
+		[pod_bundle load];
+	}
+	UIImage *image = [UIImage imageNamed:imageName inBundle:pod_bundle compatibleWithTraitCollection:nil];
+	return image;
+}
+
 @end
